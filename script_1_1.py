@@ -44,7 +44,7 @@ if (EXECUTE_ENDED_STR in resDecodedStdOut):
 else:
 	#print("Audio not played")
 	#FINAL_CONCLUSION = ERROR_AUDIO_NOT_PLAYED
-	if (PIPELINE_PREROLLING in resDecodedStdOut and PIPELINE_PREROLLING_FAIL in resDecodedStdOut)
+	if (PIPELINE_PREROLLING in resDecodedStdOut and PIPELINE_PREROLLING_FAIL in resDecodedStdOut):
 		GRADE = 1
 	else:
 		GRADE = 0
