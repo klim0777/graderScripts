@@ -4,8 +4,9 @@ import sys
 ARGS_THAT_DECREMENTS_GRADE = ['playbin', 'uridecodebin', 'decodebin', 'autoaudiosink']
 
 EXECUTE_ENDED_STR = "Execution ended after 0:04:"
-
-#STUD_CODE = sys.argv[1]
+PIPELINE_PREROLLING = "Pipeline is PREROLLING"
+#PIPELINE_PLAYING = "Setting pipeline to PLAYING"
+PIPELINE_PREROLLING_FAIL = "ERROR: pipeline doesn't want to preroll."
 
 def get_answer():
     """
@@ -43,8 +44,10 @@ if (EXECUTE_ENDED_STR in resDecodedStdOut):
 else:
 	#print("Audio not played")
 	#FINAL_CONCLUSION = ERROR_AUDIO_NOT_PLAYED
-	GRADE = 0
-	
+	if (PIPELINE_PREROLLING in resDecodedStdOut and PIPELINE_PREROLLING_FAIL in resDecodedStdOut)
+		GRADE = 1
+	else:
+		GRADE = 0
 
 
 
